@@ -36,6 +36,19 @@ start:
         mov edx,0
         mov eax, ebx
         mov ecx, ebx
+
+	push eax
+	push edx
+	push esi
+	mov edx, 0
+	mov eax, ecx
+	mov esi, 2
+	div esi
+	pop esi
+	pop edx
+	mov esi, eax
+	pop eax
+
         sub ecx, 2
         mov esi, 2
         nxtpr:
